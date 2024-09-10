@@ -1,37 +1,34 @@
-Case Study 6: Real-Time Voting Application
-Running the Application Locally
-To run this project on your machine, follow the steps below:
+#Case Study 6: Real-Time Voting Application
+#Running the Application Locally
+#To run this project on your machine, follow the steps below:
 
-Clone the Repository:
+###Clone the Repository:
 
 bash
-Copy code
 git clone <repository-url>
-Navigate to the Project Directory:
+
+###Navigate to the Project Directory:
 
 bash
-Copy code
 cd <directory-name>
-Install the Required Dependencies:
 
+###Install the Required Dependencies:
 bash
-Copy code
 yarn install
-Launch the Development Server:
 
+###Launch the Development Server:
 bash
-Copy code
 yarn run dev
-Questions
-1. How would you implement a real-time WebSocket connection for live voting updates?
+
+#Questions
+###1. How would you implement a real-time WebSocket connection for live voting updates?
 For handling real-time voting, I would utilize Socket.IO to manage WebSocket connections. Here's how I would implement it:
 
-Set Up the Server:
+**Set Up the Server**:
 
 First, create a server using Node.js and Express.
 Then, integrate Socket.IO to facilitate WebSocket communication.
 js
-Copy code
 const express = require('express');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
@@ -59,7 +56,6 @@ Client-Side Integration:
 
 On the client side (using React), establish the WebSocket connection with Socket.IO.
 js
-Copy code
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
